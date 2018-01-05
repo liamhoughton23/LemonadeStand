@@ -10,8 +10,8 @@ namespace LemonadeStand
     {
         //member variables
         public int tempature;
-        public string amountOfClouds;
-        public 
+        public Random randTemp;
+        public Random rand
 
 
 
@@ -19,5 +19,13 @@ namespace LemonadeStand
 
 
         //member methods
+        public int gettingTemp()
+        {
+            tempature = rand.Next(50, 105);
+            return tempature;
+        }
+
+
+
     }
 }

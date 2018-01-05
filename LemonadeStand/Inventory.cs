@@ -11,13 +11,17 @@ namespace LemonadeStand
         //member variables
         public int numberOfLemons;
         public int numberOfCups;
-        public int cupsOfSugar;
+        public int numberOfSugar;
         public int numberOfIceCubes;
 
 
         //constructor
-
+        public Inventory()
+        {
+          
+        }
 
         //member methods
-    }
+
+}
 }
