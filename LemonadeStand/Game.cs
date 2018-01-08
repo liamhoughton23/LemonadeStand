@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Game
     {
         //member variables
-
+        public double priceOflemonade;
 
         //constructor
 

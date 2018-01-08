@@ -18,7 +18,10 @@ namespace LemonadeStand
         //constructor
         public Inventory()
         {
-          
+            numberOfLemons = 0;
+            numberOfCups = 0;
+            numberOfSugar = 0;
+            numberOfIceCubes = 0;
         }
 
         //member methods

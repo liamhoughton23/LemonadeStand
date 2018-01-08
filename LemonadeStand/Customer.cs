@@ -9,11 +9,12 @@ namespace LemonadeStand
     class Customer
     {
         //member variables
-
+        Random random; 
 
         //constructor
 
 
         //member methods
+
     }
 }

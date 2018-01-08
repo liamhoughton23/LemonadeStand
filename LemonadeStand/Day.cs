@@ -9,8 +9,9 @@ namespace LemonadeStand
     class Day
     {
         //member variables
-        public double numberOfDays;
-
+        public int numberOfDays;
+        public int selectedDay;
+       
 
 
         //constructor
@@ -22,9 +23,10 @@ namespace LemonadeStand
         //member methods
         public void gettingDay()
         {
+            
             for(int i = 0; i > 7; i++)
             {
-                if ()
+                if ( = true)
                 {
                     Console.WriteLine("Monday");
                     

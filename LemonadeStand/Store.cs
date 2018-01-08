@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Store : Player
+    class Store : Inventory
     {
         //member variables
         public double priceOf10Lemons;
@@ -21,6 +21,7 @@ namespace LemonadeStand
         public double priceOf100IceCubes;
         public double priceOf250IceCubes;
         public double priceOf500IceCubes;
+        string options;
 
         //constructor
         public Store()
@@ -37,7 +38,7 @@ namespace LemonadeStand
             priceOf100IceCubes = 0.96;
             priceOf250IceCubes = 2.07;
             priceOf500IceCubes = 3.91;
-            buyingItems();
+            selectingTypeOfItem();
         }
 
         //member methods
@@ -52,9 +53,10 @@ namespace LemonadeStand
             
         }
 
-        public double buyingItems()
+        public void selectingTypeOfItem()
         {
-            switch ()
+
+            switch (options)
             {
                 case "lemons":
                     Console.WriteLine("10 Lemons: " + priceOf10Lemons);
@@ -80,5 +82,111 @@ namespace LemonadeStand
                     Console.WriteLine("Oops, you typed in something wrong, make sure nothing is capitalized.");
                     break;
             }
+
+        }
+        public void choosingLemons()
+        {
+            Console.WriteLine("Type in the number of lemons you want to buy");
+            switch (options)
+            {
+                case "10":
+                    Console.WriteLine("You bought 10 lemons.");
+                    numberOfLemons + 10;
+                    break;
+                case "30":
+                    Console.WriteLine("You bought 30 lemons.");
+                    numberOfLemons + 30;
+                    break;
+                case "75":
+                    Console.WriteLine("You bought 75 lemons.");
+                    numberOfLemons + 75;
+                    break;
+                default:
+                    Console.WriteLine("You typed in something wrong.");
+                    choosingLemons();
+                    break;
+
+
+                
+            }
+        }
+
+        public void choosingCups()
+        {
+            Console.WriteLine("Type in the number of cups you want to buy");
+            switch (options)
+            {
+                case "25":
+                    Console.WriteLine("You bought 25 cups.");
+                    numberOfCups + 25;
+                    break;
+                case "50":
+                    Console.WriteLine("You bought 50 cups.");
+                    numberOfCups + 50;
+                    break;
+                case "100":
+                    Console.WriteLine("You bought 100 cups.");
+                    numberOfCups + 100;
+                    break;
+                default:
+                    Console.WriteLine("You typed in something wrong.");
+                    choosingCups();
+                    break;
+             }
+        }
+
+        public void choosingSugar()
+        {
+           Console.WriteLine("Type in the number of cups of sugar you want to buy");
+            switch (options)
+            {
+                case "8":
+                    Console.WriteLine("You bought 8 cups of sugar.");
+                    numberOfSugar + 8;
+
+                    break;
+                case "20":
+                    Console.WriteLine("You bought 20 cups of sugar.");
+                    numberOfSugar + 20;
+                    break;
+                case "48":
+                    Console.WriteLine("You bought 48 cups of sugar.");
+                    numberOfSugar + 48;
+                    break;
+                default:
+                    Console.WriteLine("You typed in something wrong.");
+                    choosingSugar();
+                    break;
+             }
+        }
+
+        public void choosingIceCubes()
+        {
+            Console.WriteLine("Type in the number of ice cubes you want to buy");
+            switch (options)
+            {
+                case "100":
+                    Console.WriteLine("You bought 100 ice cubes.");
+                    numberOfLemons + 10;
+                    break;
+                case "250":
+                    Console.WriteLine("You bought 250 ice cubes.");
+                    numberOfLemons + 30;
+                    break;
+                case "500":
+                    Console.WriteLine("You bought 75 lemons.");
+                    numberOfLemons + 75;
+                    break;
+                default:
+                    Console.WriteLine("You typed in something wrong.");
+                    choosingLemons();
+                    break;
+
+
+
+            }
+        }
+
     }
 }
+
