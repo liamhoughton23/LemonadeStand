@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Program
+    class Sugar : Items
     {
-        static void Main(string[] args)
-        {
-            
-        }
     }
 }

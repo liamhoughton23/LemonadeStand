@@ -26,7 +26,7 @@ namespace LemonadeStand
 
             for (int i = 0; i > 7; i++)
             {
-                if ( = true)
+                if  ()
                 {
                     Console.WriteLine("Monday");
 

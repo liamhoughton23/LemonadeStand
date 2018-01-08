@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Store : Inventory
+    class Store 
     {
         //member variables
         public double priceOf10Lemons;
@@ -99,18 +99,18 @@ namespace LemonadeStand
             {
                 case "10":
                     Console.WriteLine("You bought 10 lemons.");
-                    //numberOfLemons + 10;
-                    //amountOfMoney - priceOf10Lemons;
+                    numberOfLemons += 10;
+                    amountOfMoney -= priceOf10Lemons;
                     break;
                 case "30":
                     Console.WriteLine("You bought 30 lemons.");
-                    //numberOfLemons + 30;
-                    //amountOfMoney - priceOf30Lemons;
+                    numberOfLemons + 30;
+                    amountOfMoney - priceOf30Lemons;
                     break;
                 case "75":
                     Console.WriteLine("You bought 75 lemons.");
-                    //numberOfLemons + 75;
-                    //amountOfMoney - priceOf75Lemons;
+                    numberOfLemons + 75;
+                    amountOfMoney - priceOf75Lemons;
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -130,18 +130,18 @@ namespace LemonadeStand
             {
                 case "25":
                     Console.WriteLine("You bought 25 cups.");
-                    //numberOfCups + 25;
-                    //amountOfMoney - priceOf25Cups;
+                    numberOfCups + 25;
+                    amountOfMoney - priceOf25Cups;
                     break;
                 case "50":
                     Console.WriteLine("You bought 50 cups.");
-                    //numberOfCups + 50;
-                    //amountOfMoney - priceOf50Cups; 
+                    numberOfCups + 50;
+                    amountOfMoney - priceOf50Cups; 
                     break;
                 case "100":
                     Console.WriteLine("You bought 100 cups.");
-                    //numberOfCups + 100;
-                    //amountOfMoney - priceOf100Cups;
+                    numberOfCups + 100;
+                    amountOfMoney - priceOf100Cups;
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -158,19 +158,19 @@ namespace LemonadeStand
             {
                 case "8":
                     Console.WriteLine("You bought 8 cups of sugar.");
-                    //numberOfSugar + 8;
-                    //amountOfMoney - priceOf8CupsSugar;
+                    numberOfSugar + 8;
+                    amountOfMoney - priceOf8CupsSugar;
 
                     break;
                 case "20":
                     Console.WriteLine("You bought 20 cups of sugar.");
-                   // numberOfSugar + 20;
-                    //amountOfMoney - priceOf20CupsSugar;
+                    numberOfSugar + 20;
+                    amountOfMoney - priceOf20CupsSugar;
                     break;
                 case "48":
                     Console.WriteLine("You bought 48 cups of sugar.");
-                    //numberOfSugar + 48;
-                    //amountOfMoney - priceOf48CupsSugar;
+                    numberOfSugar + 48;
+                    amountOfMoney - priceOf48CupsSugar;
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -187,18 +187,18 @@ namespace LemonadeStand
             {
                 case "100":
                     Console.WriteLine("You bought 100 ice cubes.");
-                    //numberOfLemons + 10;
-                    //amountOfMoney - priceOf100IceCubes;
+                    numberOfLemons + 10;
+                    amountOfMoney - priceOf100IceCubes;
                     break;
                 case "250":
                     Console.WriteLine("You bought 250 ice cubes.");
-                   // numberOfLemons + 30;
-                    //amountOfMoney - priceOf250IceCubes;
+                    numberOfLemons + 30;
+                    amountOfMoney - priceOf250IceCubes;
                     break;
                 case "500":
                     Console.WriteLine("You bought 75 lemons.");
-                    //numberOfLemons + 75;
-                    //amountOfMoney - priceOf500IceCubes;
+                    numberOfLemons + 75;
+                    amountOfMoney - priceOf500IceCubes;
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");

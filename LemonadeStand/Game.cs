@@ -9,7 +9,7 @@ namespace LemonadeStand
     class Game
     {
         //member variables
-        public double priceOflemonade;
+        public string priceOflemonade;
 
         //constructor
 
@@ -24,6 +24,13 @@ namespace LemonadeStand
             Console.ReadLine();
             Console.WriteLine("You start with $20.00");
             Store Store = new Store();
+        }
+        public string SettingPrice()
+        {
+            Console.WriteLine("What do you want your price to be?");
+            priceOflemonade = Console.ReadLine();
+            return priceOflemonade;
+
         }
     }
 }
