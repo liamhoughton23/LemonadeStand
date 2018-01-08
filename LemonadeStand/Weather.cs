@@ -36,14 +36,9 @@ namespace LemonadeStand
             {
                 temp = channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["temp"].Value;
                 condition = channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["text"].Value;
-                if (input == "temp")
-                {
-                    return temp;
-                }
-                if (input == "cond")
-                {
-                    return condition;
-                }
+                Console.WriteLine(temp);
+                Console.WriteLine(condition);
+                Console.ReadLine();
             }
             catch
             {

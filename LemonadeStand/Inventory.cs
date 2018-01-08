@@ -9,22 +9,53 @@ namespace LemonadeStand
     class Inventory 
     {
         //member variables
-        public int numberOfLemons;
-        public int numberOfCups;
-        public int numberOfSugar;
-        public int numberOfIceCubes;
-
+        Store store;
+        List<int> storingLemons = new List<int>();
+        List<int> storingCups = new List<int>();
+        List<int> storingSugar = new List<int>();
+        List<int> storingIceCubes = new List<int>();
 
         //constructor
         public Inventory()
         {
-            numberOfLemons = 0;
-            numberOfCups = 0;
-            numberOfSugar = 0;
-            numberOfIceCubes = 0;
+            store = new Store();
+        }
+        //member methods
+        public void CapturingItemsForLemons()
+        {
+            for (int i = 0; i < store.numberOfItemsBought; i++)
+            {
+                Lemons Lemons = new Lemons();
+                storingLemons.Add(1);
+            }
+        }
+        public void CapturingItemsForCups()
+        {
+            for (int i = 0; i < store.numberOfItemsBought; i++)
+            {
+                Cups Cups = new Cups();
+                storingCups.Add(1);
+            }
         }
 
-        //member methods
+        public void CapturingItemsForSugar()
+        {
+            for (int i = 0; i < store.numberOfItemsBought; i++)
+            {
+                Sugar Sugar = new Sugar();
+                storingSugar.Add(1);
 
-}
+            }
+        }
+
+        public void CapturingItemsForIceCubes()
+        {
+            for (int i = 0; i < store.numberOfItemsBought; i++)
+            {
+                IceCubes IceCubes = new IceCubes();
+                storingIceCubes.Add(1);
+            }
+        }
+
+    }
 }

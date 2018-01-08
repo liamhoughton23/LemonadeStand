@@ -8,10 +8,14 @@ namespace LemonadeStand
 {
     class Player
     {
-        //member variables
-        public double startingMoney;
+        //member variable
         public double amountOfMoney;
+        Day day;
 
+        public Player()
+        {
+            day = new Day();
+        }
         
         public void Money()
         {

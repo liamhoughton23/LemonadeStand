@@ -10,26 +10,57 @@ namespace LemonadeStand
     {
         //member variables
         public int numberOfDays;
-        public int selectedDay;
 
 
 
         //constructor
         public Day()
         {
-            numberOfDays = 7;
+            numberOfDays = 0;
+            GettingDay();
         }
 
         //member methods
         public void GettingDay()
         {
 
-            for (int i = 0; i > 7; i++)
+            for (int i = 1; i <= 7; i++)
             {
-                if  ()
+                if (i == 1)
                 {
-                    Console.WriteLine("Monday");
-
+                    Console.WriteLine("Day 1");
+                    Store Store = new Store();    
+                    
+                }
+                else if (i == 2)
+                {
+                    Console.WriteLine("Day 2");
+                    Store Store = new Store();
+                }
+                else if (i == 3)
+                {
+                    Console.WriteLine("Day 3");
+                    Store Store = new Store();
+                }
+                else if (i== 4)
+                {
+                    Console.WriteLine("Day 4");
+                    Store Store = new Store();
+                }
+                else if (i == 5)
+                {
+                    Console.WriteLine("Day 5");
+                    Store Store = new Store();
+                }
+                else if (i == 6)
+                {
+                    Console.WriteLine("Day 6");
+                    Store Store = new Store();
+                }
+                else
+                {
+                    Console.WriteLine("Last Day!");
+                    Store Store = new Store();
                 }
             }
         }

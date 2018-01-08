@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Lemons : Items
+    class Cost
     {
-        public override string GetName()
-        {
-            name = "Lemons";
-            return name;
-        }
+
     }
 }

@@ -8,5 +8,10 @@ namespace LemonadeStand
 {
     class Sugar : Items
     {
+        public override string GetName()
+        {
+            name = "Sugar";
+            return name;
+        }
     }
 }

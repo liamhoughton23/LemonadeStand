@@ -21,7 +21,11 @@ namespace LemonadeStand
         public double priceOf100IceCubes;
         public double priceOf250IceCubes;
         public double priceOf500IceCubes;
+        public int numberOfItemsBought;
         string option;
+        Inventory inventory;
+        Player player;
+
 
         //constructor
         public Store()
@@ -38,6 +42,9 @@ namespace LemonadeStand
             priceOf100IceCubes = 0.96;
             priceOf250IceCubes = 2.07;
             priceOf500IceCubes = 3.91;
+            numberOfItemsBought = 0;
+            player = new Player();
+            inventory = new Inventory();
             DisplayingStoreInfo();
         }
 
@@ -99,18 +106,24 @@ namespace LemonadeStand
             {
                 case "10":
                     Console.WriteLine("You bought 10 lemons.");
-                    numberOfLemons += 10;
-                    amountOfMoney -= priceOf10Lemons;
+                    numberOfItemsBought = 10;
+                    player.amountOfMoney -= priceOf10Lemons;
+                    inventory.CapturingItemsForLemons();
+                    buyingMore();
                     break;
                 case "30":
                     Console.WriteLine("You bought 30 lemons.");
-                    numberOfLemons + 30;
-                    amountOfMoney - priceOf30Lemons;
+                    numberOfItemsBought = 30;
+                    player.amountOfMoney -= priceOf30Lemons;
+                    inventory.CapturingItemsForLemons();
+                    buyingMore();
                     break;
                 case "75":
                     Console.WriteLine("You bought 75 lemons.");
-                    numberOfLemons + 75;
-                    amountOfMoney - priceOf75Lemons;
+                    numberOfItemsBought = 75;
+                    player.amountOfMoney -= priceOf75Lemons;
+                    inventory.CapturingItemsForLemons();
+                    buyingMore();
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -130,18 +143,24 @@ namespace LemonadeStand
             {
                 case "25":
                     Console.WriteLine("You bought 25 cups.");
-                    numberOfCups + 25;
-                    amountOfMoney - priceOf25Cups;
+                    numberOfItemsBought = 25;
+                    player.amountOfMoney -= priceOf25Cups;
+                    inventory.CapturingItemsForCups();
+                    buyingMore();
                     break;
                 case "50":
                     Console.WriteLine("You bought 50 cups.");
-                    numberOfCups + 50;
-                    amountOfMoney - priceOf50Cups; 
+                    numberOfItemsBought = 50;
+                    player.amountOfMoney -= priceOf50Cups;
+                    inventory.CapturingItemsForCups();
+                    buyingMore();
                     break;
                 case "100":
                     Console.WriteLine("You bought 100 cups.");
-                    numberOfCups + 100;
-                    amountOfMoney - priceOf100Cups;
+                    numberOfItemsBought = 100;
+                    player.amountOfMoney -= priceOf100Cups;
+                    inventory.CapturingItemsForCups();
+                    buyingMore();
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -158,19 +177,24 @@ namespace LemonadeStand
             {
                 case "8":
                     Console.WriteLine("You bought 8 cups of sugar.");
-                    numberOfSugar + 8;
-                    amountOfMoney - priceOf8CupsSugar;
-
+                    numberOfItemsBought = 8;
+                    player.amountOfMoney -= priceOf8CupsSugar;
+                    inventory.CapturingItemsForSugar();
+                    buyingMore();
                     break;
                 case "20":
                     Console.WriteLine("You bought 20 cups of sugar.");
-                    numberOfSugar + 20;
-                    amountOfMoney - priceOf20CupsSugar;
+                    numberOfItemsBought = 20;
+                    player.amountOfMoney -= priceOf20CupsSugar;
+                    inventory.CapturingItemsForSugar();
+                    buyingMore();
                     break;
                 case "48":
                     Console.WriteLine("You bought 48 cups of sugar.");
-                    numberOfSugar + 48;
-                    amountOfMoney - priceOf48CupsSugar;
+                    numberOfItemsBought = 48;
+                    player.amountOfMoney -= priceOf48CupsSugar;
+                    inventory.CapturingItemsForSugar();
+                    buyingMore();
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -187,18 +211,24 @@ namespace LemonadeStand
             {
                 case "100":
                     Console.WriteLine("You bought 100 ice cubes.");
-                    numberOfLemons + 10;
-                    amountOfMoney - priceOf100IceCubes;
+                    numberOfItemsBought = 10;
+                    player.amountOfMoney -= priceOf100IceCubes;
+                    inventory.CapturingItemsForIceCubes();
+                    buyingMore();
                     break;
                 case "250":
                     Console.WriteLine("You bought 250 ice cubes.");
-                    numberOfLemons + 30;
-                    amountOfMoney - priceOf250IceCubes;
+                    numberOfItemsBought = 30;
+                    player.amountOfMoney -= priceOf250IceCubes;
+                    inventory.CapturingItemsForIceCubes();
+                    buyingMore();
                     break;
                 case "500":
                     Console.WriteLine("You bought 75 lemons.");
-                    numberOfLemons + 75;
-                    amountOfMoney - priceOf500IceCubes;
+                    numberOfItemsBought = 75;
+                    player.amountOfMoney -= priceOf500IceCubes;
+                    inventory.CapturingItemsForIceCubes();
+                    buyingMore();
                     break;
                 default:
                     Console.WriteLine("You typed in something wrong.");
@@ -210,6 +240,24 @@ namespace LemonadeStand
             }
         }
 
+        public void buyingMore()
+        {
+            Console.WriteLine("Do you want to buy more?");
+            switch (option)
+            {
+                case "yes":
+                    SelectingTypeOfItem();
+                    break;
+                case "no":
+                    break;
+                default:
+                    Console.WriteLine("Oops, typed in something wrong.");
+                    break;
+                
+
+
+            }
+        }
     }
 }
 

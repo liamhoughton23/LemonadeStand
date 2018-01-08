@@ -9,10 +9,18 @@ namespace LemonadeStand
     class Game
     {
         //member variables
-        public string priceOflemonade;
+        Player player;
+        Day day;
+
+
 
         //constructor
-
+        public Game()
+        {
+            DisplayRules();
+            player = new Player();
+            
+        }
 
         //member methods
         public void DisplayRules()
@@ -23,14 +31,10 @@ namespace LemonadeStand
             Console.WriteLine("The weather will affect how much people want lemonade, so price it accordingly. ");
             Console.ReadLine();
             Console.WriteLine("You start with $20.00");
-            Store Store = new Store();
+            
         }
-        public string SettingPrice()
-        {
-            Console.WriteLine("What do you want your price to be?");
-            priceOflemonade = Console.ReadLine();
-            return priceOflemonade;
+      
 
-        }
+        
     }
 }
