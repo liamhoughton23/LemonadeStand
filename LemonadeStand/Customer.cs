@@ -9,12 +9,35 @@ namespace LemonadeStand
     class Customer
     {
         //member variables
-        Random random; 
+        Random random;
+        int probabilityFirst;
+        int probabilitySecond;
+        int numberOfCustomers;
+        int numberOfCustomersBuy;
+
 
         //constructor
-
+        public Customer()
+        {
+            random = new Random();
+        }
 
         //member methods
+        public void GettingCustomer()
+        {
+            probabilityFirst = random.Next(0, 100);
+            probabilitySecond = random.Next(0, 100);
+            if (probabilityFirst > probabilitySecond)
+            {
+                numberOfCustomers++;
+                numberOfCustomersBuy++;
+            }
+            else
+            {
+                numberOfCustomers++; 
+            }
 
+
+        }
     }
 }

@@ -10,7 +10,8 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            Weather wet = new Weather();
+            Game wet = new Game();
+            wet.DisplayRules();
         }
     }
 }

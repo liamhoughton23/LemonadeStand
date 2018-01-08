@@ -15,7 +15,7 @@ namespace LemonadeStand
 
 
         //member methods
-        public void displayRules()
+        public void DisplayRules()
         {
             Console.WriteLine("Welcome to Lemonade Stand!");
             Console.ReadLine();
@@ -23,6 +23,7 @@ namespace LemonadeStand
             Console.WriteLine("The weather will affect how much people want lemonade, so price it accordingly. ");
             Console.ReadLine();
             Console.WriteLine("You start with $20.00");
+            Store Store = new Store();
         }
     }
 }

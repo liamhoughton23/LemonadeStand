@@ -11,7 +11,7 @@ namespace LemonadeStand
         //member variables
         public int numberOfDays;
         public int selectedDay;
-       
+
 
 
         //constructor
@@ -21,15 +21,15 @@ namespace LemonadeStand
         }
 
         //member methods
-        public void gettingDay()
+        public void GettingDay()
         {
-            
-            for(int i = 0; i > 7; i++)
+
+            for (int i = 0; i > 7; i++)
             {
                 if ( = true)
                 {
                     Console.WriteLine("Monday");
-                    
+
                 }
             }
         }

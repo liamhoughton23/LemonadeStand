@@ -12,13 +12,14 @@ namespace LemonadeStand
         public double startingMoney;
         public double amountOfMoney;
 
-        //constructor
-        public Player()
+        
+        public void Money()
         {
-            startingMoney = 20.00;
+            amountOfMoney = 20.00;
+            
         }
 
         //member methods
-        public double  
+          
     }
 }
