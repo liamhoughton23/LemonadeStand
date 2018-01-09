@@ -9,10 +9,28 @@ namespace LemonadeStand
     class Recipe
     {
         public string numberOfLemonsPerPitcherInput;
-        public string amountOfSugarPerPitcher;
-        public string amountOfIcePerCup;
+        public string amountOfSugarPerPitcherInput;
+        public int amountOfIcePerCup;
         public int numberOfLemonsPerPitcher;
+        public int amountOfSugarPerPitcher;
+        public string amountOfIcePerCupInput;
+        public string priceInput;
+        public double price;
 
+        public void GettingPrice()
+        {
+            Console.WriteLine("What do you want the price of your lemonade to be set at?");
+            priceInput = Console.ReadLine();
+            try
+            {
+                price = Convert.ToDouble(priceInput);
+            }
+            catch
+            {
+                Console.WriteLine("you didnt't type in a number... try again.");
+                GettingPrice();
+            }
+        }
 
 
         public void GettingLemonsPitcher(Inventory inventory, Recipe recipe)
@@ -22,7 +40,7 @@ namespace LemonadeStand
             try
             {
                 numberOfLemonsPerPitcher = Convert.ToInt32(numberOfLemonsPerPitcherInput);
-                inventory.CheckingInventory(recipe);
+                inventory.CheckingInventoryLemons(inventory, recipe);
             }
             catch
             {
@@ -32,40 +50,41 @@ namespace LemonadeStand
 
         }
 
-        public void GettingSugarPitcher()
+        public void GettingSugarPitcher(Inventory inventory, Recipe recipe)
         {
             Console.WriteLine("How many cubes of sugar do you want to have per pitcher?");
-            amountOfSugarPerPitcher = Console.ReadLine();
+            amountOfSugarPerPitcherInput = Console.ReadLine();
            try
             {
-                Convert.ToInt32(amountOfSugarPerPitcher);
-
+                amountOfSugarPerPitcher = Convert.ToInt32(amountOfSugarPerPitcher);
+                inventory.CheckingInventorySugar(inventory, recipe);
             }
             catch
             {
                 Console.WriteLine("You didnt type in a number. try again");
-                GettingSugarPitcher();
+                GettingSugarPitcher(inventory, recipe);
             }
 
    
         }
 
-        public void GettingIcePerCup()
+        public void GettingIcePerCup(Inventory inventory, Recipe recipe)
         {
             Console.WriteLine("How many cubes of sugar do you want to have per pitcher?");
-            amountOfIcePerCup = Console.ReadLine();
+            amountOfIcePerCupInput = Console.ReadLine();
             try
             {
-                Convert.ToInt32(amountOfIcePerCup);
-
+                amountOfIcePerCup = Convert.ToInt32(amountOfIcePerCupInput);
+                inventory.CheckingInventoryIceCubes(inventory, recipe);
             }
             catch
             {
                 Console.WriteLine("You didnt type in a number. try again");
-                GettingSugarPitcher();
+                GettingIcePerCup(inventory, recipe);
             }
 
 
         }
+     
     }
 }

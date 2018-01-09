@@ -61,7 +61,7 @@ namespace LemonadeStand
             Console.WriteLine("Ice Cubes: " + storingIceCubes.Count);
         }
 
-        public void CheckingInventory(Recipe recipe)
+        public void CheckingInventoryLemons(Inventory inventory, Recipe recipe)
         {
             if (recipe.numberOfLemonsPerPitcher < storingLemons.Count)
             {
@@ -70,12 +70,52 @@ namespace LemonadeStand
             else
             {
                 Console.WriteLine("You don't have enough to add that to your pitcher.");
+                recipe.GettingLemonsPitcher(inventory, recipe);
             }
         }
 
+        public void CheckingInventorySugar(Inventory inventory, Recipe recipe)
+        {
+            if (recipe.numberOfLemonsPerPitcher < storingSugar.Count)
+            {
+                RemoveLemons(recipe);
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough to add that to your pitcher.");
+                recipe.GettingSugarPitcher(inventory, recipe);
+            }
+        }
+
+        public void CheckingInventoryIceCubes(Inventory inventory, Recipe recipe)
+        {
+            if (recipe.amountOfIcePerCup < storingCups.Count)
+            {
+                RemoveIceCubes(recipe);
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough to add that amount of ice to your cup.");
+                recipe.GettingIcePerCup(inventory, recipe);
+            }
+        }
         public void RemoveLemons(Recipe recipe)
         {
             for (int i = 0; i < recipe.numberOfLemonsPerPitcher; i++)
+            {
+                storingLemons.Remove(i);
+            }
+        }
+        public void RemoveSugar(Recipe recipe)
+        {
+            for (int i = 0; i < recipe.amountOfSugarPerPitcher; i++)
+            {
+                storingSugar.Remove(i);
+            }
+        }
+        public void RemoveIceCubes(Recipe recipe)
+        {
+            for (int i = 0; i < recipe.amountOfIcePerCup; i++)
             {
                 storingLemons.Remove(i);
             }

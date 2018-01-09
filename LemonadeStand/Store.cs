@@ -217,7 +217,7 @@ namespace LemonadeStand
             {
                 case "100":
                     Console.WriteLine("You bought 100 ice cubes.");
-                    player.numberOfItemsBought = 10;
+                    player.numberOfItemsBought = 100;
                     cost = priceOf100IceCubes;
                     wallet.ValidatingFunds(player, cost);
                     inventory.CapturingItemsForIceCubes(player);
@@ -225,7 +225,7 @@ namespace LemonadeStand
                     break;
                 case "250":
                     Console.WriteLine("You bought 250 ice cubes.");
-                    player.numberOfItemsBought = 30;
+                    player.numberOfItemsBought = 250;
                     cost = priceOf250IceCubes;
                     wallet.ValidatingFunds(player, cost);
                     inventory.CapturingItemsForIceCubes(player);
@@ -233,7 +233,7 @@ namespace LemonadeStand
                     break;
                 case "500":
                     Console.WriteLine("You bought 500 ice cubes.");
-                    player.numberOfItemsBought = 75;
+                    player.numberOfItemsBought = 500;
                     cost = priceOf500IceCubes;
                     wallet.ValidatingFunds(player, cost);
                     inventory.CapturingItemsForIceCubes(player);

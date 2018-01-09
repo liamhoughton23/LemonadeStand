@@ -29,6 +29,7 @@ namespace LemonadeStand
             probabilitySecond = random.Next(0, 100);
             if (probabilityFirst > probabilitySecond)
             {
+
                 numberOfCustomers++;
                 numberOfCustomersBuy++;
             }

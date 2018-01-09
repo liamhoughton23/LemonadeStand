@@ -32,6 +32,10 @@ namespace LemonadeStand
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
                     Store.SelectingTypeOfItem(player, inventory, wallet);
+                    Recipe recipe = new Recipe();
+                    recipe.GettingLemonsPitcher(inventory, recipe);
+                    recipe.GettingSugarPitcher(inventory, recipe);
+                    recipe.GettingIcePerCup(inventory, recipe);
                 }
                 else if (i == 2)
                 {
