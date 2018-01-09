@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         //member variables
         public int numberOfDays;
-
+        
 
 
         //constructor
@@ -29,39 +29,56 @@ namespace LemonadeStand
                 if (i == 1)
                 {
                     Console.WriteLine("Day 1");
-                    Store Store = new Store();    
-                    
+                    Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem(amountOfMoney,  );
                 }
                 else if (i == 2)
                 {
                     Console.WriteLine("Day 2");
                     Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem();
+
                 }
                 else if (i == 3)
                 {
                     Console.WriteLine("Day 3");
                     Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem();
+
                 }
                 else if (i== 4)
                 {
                     Console.WriteLine("Day 4");
                     Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem();
                 }
                 else if (i == 5)
                 {
                     Console.WriteLine("Day 5");
                     Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem();
                 }
                 else if (i == 6)
                 {
                     Console.WriteLine("Day 6");
                     Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem();
                 }
                 else
                 {
                     Console.WriteLine("Last Day!");
                     Store Store = new Store();
+                    Store.DisplayingStoreInfo();
+                    Store.SelectingTypeOfItem();
                 }
+              
+
             }
         }
     }

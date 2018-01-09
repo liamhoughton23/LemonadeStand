@@ -21,7 +21,7 @@ namespace LemonadeStand
 
         //constructor
 
-        public String GetWeather(String input)
+        public String GetWeather()
         {
             String query = String.Format("https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='miami, fl')&format=xml&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
             XmlDocument wData = new XmlDocument();
@@ -32,18 +32,18 @@ namespace LemonadeStand
 
             XmlNode channel = wData.SelectSingleNode("query").SelectSingleNode("results").SelectSingleNode("channel");
             XmlNodeList nodes = wData.SelectNodes("query/results/channel");
-            try
-            {
+            //try
+            //{
                 temp = channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["temp"].Value;
                 condition = channel.SelectSingleNode("item").SelectSingleNode("yweather:condition", manager).Attributes["text"].Value;
                 Console.WriteLine(temp);
                 Console.WriteLine(condition);
                 Console.ReadLine();
-            }
-            catch
-            {
-                return "Error Reciving data";
-            }
+            //}
+            //catch
+            //{
+               // return "Error Reciving data";
+            //}
             return "error";
            
         }
