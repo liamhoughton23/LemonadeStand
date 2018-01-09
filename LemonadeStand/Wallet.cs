@@ -19,6 +19,7 @@ namespace LemonadeStand
             else
             {
                 player.amountOfMoney -= amount;
+                Console.WriteLine("You have this much money now: " + player.amountOfMoney);
             }
         }
     }

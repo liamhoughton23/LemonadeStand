@@ -14,12 +14,6 @@ namespace LemonadeStand
         List<int> storingCups = new List<int>();
         List<int> storingSugar = new List<int>();
         List<int> storingIceCubes = new List<int>();
-
-        //constructor
-        public Inventory()
-        {
-            //player = new Player();
-        }
         //member methods
         public void CapturingItemsForLemons(Player player)
         {
@@ -29,6 +23,7 @@ namespace LemonadeStand
                 storingLemons.Add(1);
             }
         }
+       
         public void CapturingItemsForCups(Player player)
         {
             for (int i = 0; i < player.numberOfItemsBought; i++)
@@ -44,7 +39,6 @@ namespace LemonadeStand
             {
                 Sugar Sugar = new Sugar();
                 storingSugar.Add(1);
-
             }
         }
 
@@ -54,6 +48,36 @@ namespace LemonadeStand
             {
                 IceCubes IceCubes = new IceCubes();
                 storingIceCubes.Add(1);
+            }
+        }
+
+
+        public void displayInventory()
+        {
+            Console.WriteLine("This is your full inventory: " );
+            Console.WriteLine("Lemons: " + storingLemons.Count);
+            Console.WriteLine("Cups: " + storingCups.Count);
+            Console.WriteLine("Sugar: " + storingSugar.Count);
+            Console.WriteLine("Ice Cubes: " + storingIceCubes.Count);
+        }
+
+        public void CheckingInventory(Recipe recipe)
+        {
+            if (recipe.numberOfLemonsPerPitcher < storingLemons.Count)
+            {
+                RemoveLemons(recipe);
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough to add that to your pitcher.");
+            }
+        }
+
+        public void RemoveLemons(Recipe recipe)
+        {
+            for (int i = 0; i < recipe.numberOfLemonsPerPitcher; i++)
+            {
+                storingLemons.Remove(i);
             }
         }
 

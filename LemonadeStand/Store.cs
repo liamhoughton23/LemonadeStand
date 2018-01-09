@@ -96,6 +96,7 @@ namespace LemonadeStand
         }
         public void ChoosingLemons(Player player, Inventory inventory, Wallet wallet)
         {
+
             Console.WriteLine("Type in the number of lemons you want to buy");
             option = Console.ReadLine();
             switch (option)
@@ -173,7 +174,7 @@ namespace LemonadeStand
 
         public void ChoosingSugar(Player player, Inventory inventory, Wallet wallet)
         {
-           Console.WriteLine("Type in the number of cups of sugar you want to buy");
+            Console.WriteLine("Type in the number of cups of sugar you want to buy");
             option = Console.ReadLine();
             switch (option)
             {
@@ -231,7 +232,7 @@ namespace LemonadeStand
                     buyingMore(player, inventory, wallet); 
                     break;
                 case "500":
-                    Console.WriteLine("You bought 75 lemons.");
+                    Console.WriteLine("You bought 500 ice cubes.");
                     player.numberOfItemsBought = 75;
                     cost = priceOf500IceCubes;
                     wallet.ValidatingFunds(player, cost);
@@ -250,16 +251,21 @@ namespace LemonadeStand
 
         public void buyingMore(Player player, Inventory inventory, Wallet wallet)
         {
+
             Console.WriteLine("Do you want to buy more?");
+            option = Console.ReadLine();
             switch (option)
             {
                 case "yes":
                     SelectingTypeOfItem(player, inventory, wallet);
                     break;
                 case "no":
+                    Console.WriteLine("Total inventory:");
+                    inventory.displayInventory();
                     break;
                 default:
                     Console.WriteLine("Oops, typed in something wrong.");
+                    SelectingTypeOfItem(player, inventory, wallet);
                     break;
                 
 

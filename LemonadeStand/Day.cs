@@ -17,11 +17,11 @@ namespace LemonadeStand
         public Day()
         {
             numberOfDays = 0;
-            GettingDay();
+            
         }
 
         //member methods
-        public void GettingDay()
+        public void GettingDay(Player player, Inventory inventory, Wallet wallet)
         {
 
             for (int i = 1; i <= 7; i++)
@@ -31,14 +31,14 @@ namespace LemonadeStand
                     Console.WriteLine("Day 1");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem(amountOfMoney,  );
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
                 }
                 else if (i == 2)
                 {
                     Console.WriteLine("Day 2");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem();
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
 
                 }
                 else if (i == 3)
@@ -46,7 +46,7 @@ namespace LemonadeStand
                     Console.WriteLine("Day 3");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem();
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
 
                 }
                 else if (i== 4)
@@ -54,28 +54,28 @@ namespace LemonadeStand
                     Console.WriteLine("Day 4");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem();
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
                 }
                 else if (i == 5)
                 {
                     Console.WriteLine("Day 5");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem();
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
                 }
                 else if (i == 6)
                 {
                     Console.WriteLine("Day 6");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem();
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
                 }
                 else
                 {
                     Console.WriteLine("Last Day!");
                     Store Store = new Store();
                     Store.DisplayingStoreInfo();
-                    Store.SelectingTypeOfItem();
+                    Store.SelectingTypeOfItem(player, inventory, wallet);
                 }
               
 

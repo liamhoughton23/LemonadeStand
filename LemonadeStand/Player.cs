@@ -11,19 +11,17 @@ namespace LemonadeStand
         //member variable
         public double amountOfMoney;
         public int numberOfItemsBought;
-        Day day;
+        
 
         public Player()
         {
-            day = new Day();
+
             numberOfItemsBought = 0;
+            amountOfMoney = 20.00;
+
         }
         
-        public void Money()
-        {
-            amountOfMoney = 20.00;
-            
-        }
+       
 
         //member methods
           

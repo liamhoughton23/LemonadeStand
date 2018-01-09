@@ -14,8 +14,8 @@ namespace LemonadeStand
         //public string forecast;
         //public Random randTemp;
         // public Random randForecast;
-        string temp;
-        string condition;
+        public string temp;
+        public string condition;
 
 
 

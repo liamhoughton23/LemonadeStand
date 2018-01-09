@@ -11,7 +11,10 @@ namespace LemonadeStand
         //member variables
         Player player;
         Day day;
-
+        Store store;
+        Inventory inventory;
+        Wallet wallet;
+        
 
 
         //constructor
@@ -19,7 +22,11 @@ namespace LemonadeStand
         {
             DisplayRules();
             player = new Player();
-            
+            day = new Day();
+            inventory = new Inventory();
+            wallet = new Wallet();
+            day.GettingDay(player, inventory, wallet);
+
         }
 
         //member methods
