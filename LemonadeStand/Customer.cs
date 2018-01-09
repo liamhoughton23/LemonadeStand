@@ -22,6 +22,15 @@ namespace LemonadeStand
             random = new Random();
         }
 
+        public void CheckingPrice()
+        {
+            Recipe recipe = new Recipe();
+            if (recipe.price < 0.50)
+            {
+                GettingCustomer();
+            }
+        }
+
         //member methods
         public void GettingCustomer()
         {
