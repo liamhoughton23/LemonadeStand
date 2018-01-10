@@ -14,6 +14,8 @@ namespace LemonadeStand
         Store store;
         Inventory inventory;
         Wallet wallet;
+        Customer customer;
+        Weather weather;
         
 
 
@@ -25,7 +27,7 @@ namespace LemonadeStand
             day = new Day();
             inventory = new Inventory();
             wallet = new Wallet();
-            day.GettingDay(player, inventory, wallet);
+            day.GettingDay(player, inventory, wallet, customer, weather);
 
         }
 

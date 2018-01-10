@@ -15,7 +15,7 @@ namespace LemonadeStand
         List<int> storingSugar = new List<int>();
         List<int> storingIceCubes = new List<int>();
         //member methods
-        public void CapturingItemsForLemons(Player player)
+        public void AddingLemons(Player player)
         {
             for (int i = 0; i < player.numberOfItemsBought; i++)
             {
@@ -24,7 +24,7 @@ namespace LemonadeStand
             }
         }
        
-        public void CapturingItemsForCups(Player player)
+        public void AddingCups(Player player)
         {
             for (int i = 0; i < player.numberOfItemsBought; i++)
             {
@@ -33,7 +33,7 @@ namespace LemonadeStand
             }
         }
 
-        public void CapturingItemsForSugar(Player player)
+        public void AddingSugar(Player player)
         {
             for (int i = 0; i < player.numberOfItemsBought; i++)
             {
@@ -42,7 +42,7 @@ namespace LemonadeStand
             }
         }
 
-        public void CapturingItemsForIceCubes(Player player)
+        public void AddingIceCubes(Player player)
         {
             for (int i = 0; i < player.numberOfItemsBought; i++)
             {
@@ -89,7 +89,7 @@ namespace LemonadeStand
 
         public void CheckingInventoryIceCubes(Inventory inventory, Recipe recipe)
         {
-            if (recipe.amountOfIcePerCup < storingCups.Count)
+            if (recipe.amountOfIcePerCup < storingIceCubes.Count)
             {
                 RemoveIceCubes(recipe);
             }
@@ -97,6 +97,17 @@ namespace LemonadeStand
             {
                 Console.WriteLine("You don't have enough to add that amount of ice to your cup.");
                 recipe.GettingIcePerCup(inventory, recipe);
+            }
+        }
+        public void CheckingInventoryCups(Recipe recipe)
+        {
+            if (storingCups.Count == 0)
+            {
+                Console.WriteLine("you don't have any more cups.");
+            }
+            else
+            {
+                storingCups.Remove(1);
             }
         }
         public void RemoveLemons(Recipe recipe)

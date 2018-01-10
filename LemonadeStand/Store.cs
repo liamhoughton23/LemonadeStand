@@ -106,7 +106,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 10;
                     cost = priceOf10Lemons;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForLemons(player);
+                    inventory.AddingLemons(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "30":
@@ -114,7 +114,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 30;
                     cost = priceOf30Lemons;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForLemons(player);
+                    inventory.AddingLemons(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "75":
@@ -122,7 +122,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 75;
                     cost = priceOf75Lemons;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForLemons(player);
+                    inventory.AddingLemons(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 default:
@@ -146,7 +146,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 25;
                     cost = priceOf25Cups;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForCups(player);
+                    inventory.AddingCups(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "50":
@@ -154,7 +154,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 50;
                     cost = priceOf50Cups;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForCups(player);
+                    inventory.AddingCups(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "100":
@@ -162,7 +162,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 100;
                     cost = priceOf100Cups;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForCups(player);
+                    inventory.AddingCups(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 default:
@@ -183,7 +183,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 8;
                     cost = priceOf8CupsSugar;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForSugar(player);
+                    inventory.AddingSugar(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "20":
@@ -191,7 +191,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 20;
                     cost = priceOf20CupsSugar;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForSugar(player);
+                    inventory.AddingSugar(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "48":
@@ -199,7 +199,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 48;
                     cost = priceOf48CupsSugar;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForSugar(player);
+                    inventory.AddingSugar(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 default:
@@ -220,7 +220,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 100;
                     cost = priceOf100IceCubes;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForIceCubes(player);
+                    inventory.AddingIceCubes(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 case "250":
@@ -228,7 +228,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 250;
                     cost = priceOf250IceCubes;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForIceCubes(player);
+                    inventory.AddingIceCubes(player);
                     buyingMore(player, inventory, wallet); 
                     break;
                 case "500":
@@ -236,7 +236,7 @@ namespace LemonadeStand
                     player.numberOfItemsBought = 500;
                     cost = priceOf500IceCubes;
                     wallet.ValidatingFunds(player, cost);
-                    inventory.CapturingItemsForIceCubes(player);
+                    inventory.AddingIceCubes(player);
                     buyingMore(player, inventory, wallet);
                     break;
                 default:
