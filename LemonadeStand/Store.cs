@@ -49,17 +49,16 @@ namespace LemonadeStand
         public void DisplayingStoreInfo()
         {
             Console.WriteLine("This is the store, you will be brought here at the start of each day.");
-            Console.WriteLine("If you wan to know the price of lemons, type 'lemons'");
-            Console.WriteLine("If you want to know the price of cups, type 'cups'");
-            Console.WriteLine("If you want to know the price of sugar, type 'sugar'");
-            Console.WriteLine("If you want to know the price of ice cubes, type 'ice cubes'");
-            
-
-
+          
+          
         }
 
         public void SelectingTypeOfItem(Player player, Inventory inventory, Wallet wallet)
         {
+            Console.WriteLine("If you wan to know the price of lemons, type 'lemons'");
+            Console.WriteLine("If you want to know the price of cups, type 'cups'");
+            Console.WriteLine("If you want to know the price of sugar, type 'sugar'");
+            Console.WriteLine("If you want to know the price of ice cubes, type 'ice cubes'");
             option = Console.ReadLine();
             switch (option)
             {
@@ -252,11 +251,12 @@ namespace LemonadeStand
         public void buyingMore(Player player, Inventory inventory, Wallet wallet)
         {
 
-            Console.WriteLine("Do you want to buy more?");
+            Console.WriteLine("Do you want to buy more? Type 'yes' or 'no'");
             option = Console.ReadLine();
             switch (option)
             {
                 case "yes":
+                    Console.WriteLine("type in what you want to buy more of");
                     SelectingTypeOfItem(player, inventory, wallet);
                     break;
                 case "no":

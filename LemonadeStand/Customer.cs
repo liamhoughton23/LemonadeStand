@@ -15,16 +15,11 @@ namespace LemonadeStand
 
 
         //constructor
-        public Customer()
-        {
-            
-           
-        }
 
         public int GettingInitialNumber()
         {
             random = new Random();
-            customerNumber = random.Next(0, 20);
+            customerNumber = random.Next(0, 19);
             return customerNumber;
         }
 
